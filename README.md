@@ -38,19 +38,8 @@ Future development plans include:
 To use the port scanner, simply run the script and enter the IP address you want to scan when prompted:
 ```bash
 python port_scanner.py
-
-Example
-Here's an example of how to use the port scanner:
-
 Enter the IP address to scan: 192.168.1.1
 Starting port scan on 192.168.1.1...
 Port 22 is open
 Port 80 is open
 Port scan complete!
-
-License
-This project is licensed under the Apache License. See the LICENSE file for more details.
-
-Contributing
-Contributions are welcome! Please feel free to submit a pull request or open an issue to suggest improvements or report bugs.
-
