@@ -6,7 +6,7 @@ import concurrent.futures
 def scan_port(ip, port):
     try:
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        sock.settimeout(1)  # Set timeout to 1 second
+        sock.settimeout(1) # change "time-out" time for your needs.  
         result = sock.connect_ex((ip, port))
         if result == 0:
             print(f"Port {port} is open")
@@ -16,7 +16,7 @@ def scan_port(ip, port):
     except TimeoutError:
         print("Timeout error")
 
-async def scan_ports(ip, start_port=1, end_port=100):
+async def scan_ports(ip, start_port=1, end_port=100): # change the number of ports for your needs.
     loop = asyncio.get_running_loop()
     tasks = []
     with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
