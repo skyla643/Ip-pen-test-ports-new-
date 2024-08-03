@@ -1,12 +1,12 @@
 # Python Port Scanner
 
 ## Overview
-This is a simple port scanner written in Python using the `socket` and `asyncio` libraries. The scanner takes an IP address as input and scans for open ports on the target machine.
+This is a simple port scanner written in Python using the `socket` and `asyncio` libraries. The scanner takes an IP address as input and scans for open ports on the target machine. This is an update from my last IP pen tester on the Hacker OS website. 
 
 ## How it Works
 The scanner follows these steps to scan for open ports:
 1. **Input Validation**: The user is prompted to enter an IP address, which is validated using the `ipaddress` library to ensure it is a valid IP address.
-2. **Port Scanning**: The scanner uses a thread pool executor to scan for open ports on the target machine. The `scan_port` function is called for each port in the range of 1 to 100 (by default).
+2. **Port Scanning**: The scanner uses a thread pool executor to scan for open ports on the target machine. The `scan_port` function is called for each port in the range of 1 to 100 (by default), you can change this number to your pleasing but it may take longer, I made this keeping processing speed in mind. 
 3. **Socket Connection**: The `scan_port` function creates a socket object and attempts to connect to the target machine on the specified port. If the connection is successful, the port is considered open.
 4. **Result Printing**: The results of the port scan are printed to the console, indicating which ports are open.
 
